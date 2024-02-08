@@ -1,0 +1,18 @@
+[package]
+name = "ocllama"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ollama-rs = { version = "0.1.6", features = ["stream"] }
+tokio = { version = "1.36.0", features = ["full"] }
+pretty_env_logger = "0.5.0"
+tokio-stream = "0.1.14"
+async-trait = "0.1.77"
+lazy_static = "1.4.0"
+serenity = "0.12.0"
+dotenv = "0.15.0"
+log = "0.4.20"
+
+[features]
+rustls = ["serenity/rustls_backend", "ollama-rs/rustls"]
